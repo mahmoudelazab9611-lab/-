@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111820">
+  <meta name="description" content="المكتبة الرسمية لمؤلفات الكاتب محمود يسري العزب. تصفح الكتب واطلب نسختك مباشرة عبر واتساب.">
+  <title>مكتبة محمود يسري العزب</title>
+  <style>
+    :root{
+      --bg:#10171e;--panel:#18232c;--panel2:#202d37;--gold:#d9b66e;
+      --gold2:#f0d9a6;--text:#f8f2e8;--muted:#b8b5ae;--line:#ffffff1c;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.9}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    .topbar{position:sticky;top:0;z-index:10;background:#10171eeb;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:12px 0}
+    .brand{font-size:20px;font-weight:800;color:var(--gold2)}
+    .brand small{display:block;font-size:10px;color:var(--muted);font-weight:400;letter-spacing:2px}
+    .links{display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+    .links a:hover{color:var(--gold2)}
+    .hero{position:relative;overflow:hidden;padding:82px 0 76px;background:radial-gradient(ellipse at 15% 20%,#5c4825 0,transparent 32%),linear-gradient(120deg,#253541,#10171e 70%)}
+    .hero:after{content:"";position:absolute;inset:18px;border:1px solid #d9b66e35;pointer-events:none}
+    .hero-inner{position:relative;z-index:1;max-width:760px}
+    .eyebrow{color:var(--gold2);font-size:13px;letter-spacing:1px}
+    h1{font-size:clamp(34px,6vw,62px);line-height:1.35;margin:14px 0;color:var(--gold2)}
+    .hero p{font-size:18px;color:#ddd5c8;max-width:680px;margin:0 0 28px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:7px;background:linear-gradient(135deg,#f0d9a6,#c49a4e);color:#17212a;font-weight:800;border:1px solid #f6e6c4;transition:.2s}
+    .button:hover{transform:translateY(-2px);filter:brightness(1.06)}
+    .button.outline{background:transparent;color:var(--gold2);border-color:#d9b66e80}
+    .section{padding:66px 0}
+    .section-head{text-align:center;margin-bottom:34px}
+    .section-head h2{font-size:clamp(26px,4vw,36px);color:var(--gold2);margin:0 0 5px}
+    .section-head p{margin:0;color:var(--muted)}
+    .shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    .book{background:linear-gradient(155deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:13px;padding:18px;transition:.22s}
+    .book:hover{transform:translateY(-5px);border-color:#d9b66e80}
+    .cover{height:310px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:7px;background:linear-gradient(145deg,#31424c,#111a21);border:1px solid #d9b66e55;color:var(--gold2);text-align:center;padding:18px}
+    .cover img{width:100%;height:100%;object-fit:contain;display:block}
+    .cover-placeholder{font-size:22px;font-weight:bold;line-height:1.8}
+    .book h3{font-size:20px;margin:17px 0 6px;color:var(--text)}
+    .book p{color:var(--muted);font-size:14px;min-height:58px;margin:0 0 16px}
+    .book .button{width:100%}
+    .empty-note{grid-column:1/-1;text-align:center;padding:36px 18px;border:1px dashed #d9b66e65;border-radius:12px;color:var(--muted)}
+    .about{background:linear-gradient(120deg,#1a2730,#131d25);border-block:1px solid var(--line)}
+    .about-box{max-width:820px;margin:auto;text-align:center}
+    .about-box h2{color:var(--gold2);font-size:30px;margin:0 0 12px}
+    .about-box p{color:#d0cbc2;margin:0;font-size:16px}
+    .contact-box{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:linear-gradient(120deg,#293943,#18232c);border:1px solid #d9b66e55;border-radius:14px;padding:28px}
+    .contact-box h2{color:var(--gold2);margin:0 0 4px}
+    .contact-box p{color:var(--muted);margin:0}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:800px){.shelf{grid-template-columns:repeat(2,minmax(0,1fr))}.cover{height:280px}}
+    @media(max-width:560px){.nav{justify-content:center}.links{justify-content:center;gap:15px}.hero{padding:58px 0}.hero:after{inset:9px}.shelf{grid-template-columns:1fr}.cover{height:340px}.section{padding:48px 0}.contact-box{justify-content:center;text-align:center}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home">مكتبة محمود يسري العزب<small>BOOKS • IDEAS • STORIES</small></a>
+      <nav class="links" aria-label="القائمة الرئيسية">
+        <a href="#home">الرئيسية</a>
+        <a href="#books">المؤلفات</a>
+        <a href="#about">عن الكاتب</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="eyebrow">المكتبة الرسمية للمؤلفات</div>
+        <h1>كل كتاب يفتح بابًا إلى حكاية</h1>
+        <p>مرحبًا بك في مكتبة محمود يسري العزب. هنا تلتقي صفحات التاريخ بحكايات الإنسان وأسئلته، وتبدأ رحلة القارئ مع كل كتاب.</p>
+        <a class="button" href="#books">تصفّح المكتبة <span aria-hidden="true">←</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="books">
+      <div class="container">
+        <div class="section-head">
+          <h2>رفوف المكتبة</h2>
+          <p>اختر كتابك، وتواصل معنا لطلب نسختك الورقية.</p>
+        </div>
+
+        <div class="shelf">
+          <!-- لإضافة كتاب: انسخ بطاقة article كاملة، ثم غيّر اسم صورة الغلاف والعنوان والنبذة ورابط واتساب. -->
+          <!-- ضع صور الأغلفة داخل مجلد اسمه covers بجوار ملف index.html، واكتب مسار الصورة مثل covers/book1.jpg. -->
+
+          <div class="empty-note">
+            <strong style="display:block;color:var(--gold2);font-size:20px">المكتبة جاهزة لاستقبال مؤلفاتك</strong>
+            أضف أغلفة الكتب وبياناتها هنا، وستظهر تلقائيًا في هذا الرف.
+          </div>
+
+          <!-- نموذج بطاقة كتاب جاهز للنسخ:
+          <article class="book">
+            <div class="cover"><img src="covers/book1.jpg" alt="غلاف اسم الكتاب"></div>
+            <h3>اسم الكتاب</h3>
+            <p>اكتب هنا نبذة قصيرة وجذابة عن الكتاب.</p>
+            <a class="button" href="https://wa.me/201030496882?text=أرغب%20في%20طلب%20كتاب%20اسم%20الكتاب" target="_blank" rel="noopener">اطلب عبر واتساب</a>
+          </article>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-box">
+        <h2>عن الكاتب</h2>
+        <p>محمود يسري العزب، كاتب ومؤلف يهتم بالتاريخ والحضارة والحكايات الإنسانية. يسعى من خلال مؤلفاته إلى تقديم المعرفة في صورة قريبة من القارئ، تجمع بين المعلومة ومتعة القراءة.</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <h2>هل تبحث عن كتاب؟</h2>
+            <p>للطلب والاستفسار عن الإصدارات، تواصل مباشرة مع المكتبة.</p>
+          </div>
+          <a class="button" href="https://wa.me/201030496882?text=مرحبًا،%20أرغب%20في%20التواصل%20مع%20مكتبة%20محمود%20يسري%20العزب" target="_blank" rel="noopener">تواصل عبر واتساب</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 مكتبة محمود يسري العزب — جميع الحقوق محفوظة</div>
+  </footer>
+</body>
+</html>
