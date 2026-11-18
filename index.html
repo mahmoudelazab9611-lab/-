@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="مكتبة محمود يسري العزب">
+<title>مكتبة محمود يسري العزب</title>
+<style>
+:root{--bg:#101820;--panel:#1b2933;--gold:#d8b66e;--cream:#f8f1e5;--muted:#c8c2b7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:Tahoma,Arial,sans-serif;line-height:1.9}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1050px,92%);margin:auto}
+header{border-bottom:1px solid #ffffff20;background:#101820}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;flex-wrap:wrap}
+.brand{font-weight:bold;color:var(--gold);font-size:20px}
+nav a:not(.brand){color:var(--muted);font-size:14px;margin-inline-start:14px}
+.hero{padding:62px 0;background:linear-gradient(135deg,#243744,#101820)}
+.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.4;margin:8px 0 14px;color:var(--gold)}
+.hero p{max-width:700px;color:var(--muted);font-size:17px}
+.kicker{color:#e8d5a8}
+.section{padding:48px 0}
+h2{color:var(--gold);font-size:28px;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 24px}
+.books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid #ffffff22;border-radius:16px;padding:20px}
+.cover{min-height:210px;border:1px solid #b99a55;border-radius:10px;background:linear-gradient(145deg,#354b55,#15222b);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;color:#f2d99b}
+.cover strong{font-size:25px;line-height:1.6}
+.cover span{font-size:13px;margin-top:12px;color:#f4e8ce}
+.card h3{font-size:21px;color:var(--cream);margin:16px 0 6px}
+.card p{color:var(--muted);margin:0 0 18px}
+.btn{display:inline-block;background:var(--gold);color:#17212a;padding:10px 20px;border-radius:8px;font-weight:bold}
+.about{background:#17232c;border-block:1px solid #ffffff20}
+.contact{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+footer{padding:24px 0;color:var(--muted);font-size:13px;border-top:1px solid #ffffff20}
+@media(max-width:650px){.books{grid-template-columns:1fr}.hero{padding:42px 0}.cover{min-height:180px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="#home">مكتبة محمود يسري العزب</a>
+<div><a href="#books">المؤلفات</a><a href="#about">عن الكاتب</a><a href="#contact">تواصل وطلب</a></div>
+</nav></div></header>
+<main id="home">
+<section class="hero"><div class="wrap">
+<div class="kicker">المكتبة الأدبية الرسمية</div>
+<h1>من حبر القلم إلى قلب القارئ</h1>
+<p>أهلًا بك في مكتبة محمود يسري العزب؛ مساحة تجمع الكتب والحكايات والأفكار، وتقرّب مؤلفات الكاتب من كل قارئ.</p>
+<a class="btn" href="#books">تصفّح المؤلفات</a>
+</div></section>
+<section class="section" id="books"><div class="wrap">
+<h2>المؤلفات المتاحة بالمكتبة</h2>
+<p class="sub">اختر الكتاب واضغط على زر الطلب للتواصل مباشرة عبر واتساب.</p>
+<div class="books">
+<article class="card">
+<div class="cover"><strong>بين سطور الحياة</strong><span>حكايات لم تُروَ</span></div>
+<h3>بين سطور الحياة.. حكايات لم تُروَ</h3>
+<p>خواطر وتأملات إنسانية تقترب من تفاصيل الحياة وما يختبئ في داخل الإنسان من مشاعر وأفكار.</p>
+<a class="btn" href="https://wa.me/201030496882?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%20%D8%B9%D9%86%20%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A8%D9%8A%D9%86%20%D8%B3%D8%B7%D9%88%D8%B1%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9" target="_blank" rel="noopener">اطلب عبر واتساب</a>
+</article>
+<article class="card">
+<div class="cover"><strong>حين دقّت القلوب</strong><span>على أبواب مصر</span></div>
+<h3>حين دقّت القلوب على أبواب مصر</h3>
+<p>شخصيات من خارج مصر تركت أثرًا في تاريخها؛ صفحات من الذاكرة والمواقف التي صنعت أثرًا لا يُنسى.</p>
+<a class="btn" href="https://wa.me/201030496882?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%20%D8%B9%D9%86%20%D9%83%D8%AA%D8%A7%D8%A8%20%D8%AD%D9%8A%D9%86%20%D8%AF%D9%82%D8%AA%20%D8%A7%D9%84%D9%82%D9%84%D9%88%D8%A8%20%D8%B9%D9%84%D9%89%20%D8%A3%D8%A8%D9%88%D8%A7%D8%A8%20%D9%85%D8%B5%D8%B1" target="_blank" rel="noopener">اطلب عبر واتساب</a>
+</article>
+</div></div></section>
+<section class="section about" id="about"><div class="wrap">
+<h2>عن الكاتب</h2>
+<p class="sub">محمود يسري العزب — كاتب ومؤلف، يقدّم عبر كتبه حكايات وتأملات في الإنسان والحياة والتاريخ.</p>
+</div></section>
+<section class="section" id="contact"><div class="wrap contact">
+<div><h2>تواصل مع المكتبة</h2><p class="sub">للطلبات والاستفسارات عن الكتب.</p></div>
+<a class="btn" href="https://wa.me/201030496882?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%20%D9%85%D9%83%D8%AA%D8%A8%D8%A9%20%D9%85%D8%AD%D9%85%D9%88%D8%AF%20%D9%8A%D8%B3%D8%B1%D9%8A%20%D8%A7%D9%84%D8%B9%D8%B2%D8%A8" target="_blank" rel="noopener">راسلنا على واتساب</a>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 مكتبة محمود يسري العزب — جميع الحقوق محفوظة.</div></footer>
+</body>
+</html>
