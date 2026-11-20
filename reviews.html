@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="آراء قراء مكتبة محمود يسري العزب ومشاركاتهم حول الكتب والروايات.">
+  <meta name="theme-color" content="#101a2b">
+  <title>آراء القراء | مكتبة محمود يسري العزب</title>
+  <style>
+    :root{--navy:#101a2b;--navy2:#17263d;--gold:#d7b56d;--cream:#f7f1e5;--muted:#c4cbd5}
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(145deg,#0c1422,#17263d);color:var(--cream);font-family:Tahoma,Arial,sans-serif;line-height:1.9}
+    .wrap{width:min(920px,92%);margin:auto;padding:28px 0 50px}
+    header{text-align:center;padding:34px 18px 26px;border:1px solid rgba(215,181,109,.35);border-radius:22px;background:rgba(255,255,255,.035)}
+    .brand{color:var(--gold);font-size:14px;letter-spacing:.4px}
+    h1{font-size:clamp(27px,5vw,42px);margin:10px 0;color:var(--gold)}
+    .intro{max-width:650px;margin:0 auto;color:var(--muted)}
+    .section{margin-top:24px;padding:24px;border-radius:18px;background:rgba(255,255,255,.045);border:1px solid rgba(215,181,109,.2)}
+    h2{color:var(--gold);font-size:22px;margin:0 0 12px}
+    .notice{padding:16px;border-right:3px solid var(--gold);background:rgba(215,181,109,.08);border-radius:10px;color:#eee5d2}
+    .empty{text-align:center;padding:24px 12px;color:var(--muted)}
+    .empty .symbol{font-size:35px;color:var(--gold)}
+    label{display:block;margin:13px 0 6px;color:#f0dfbd}
+    input,select,textarea{width:100%;padding:13px;border-radius:10px;border:1px solid rgba(215,181,109,.4);background:#0d1727;color:#fff;font:inherit;outline:none}
+    textarea{min-height:125px;resize:vertical}
+    input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+    button,.btn{display:inline-block;margin-top:18px;padding:13px 22px;border:0;border-radius:11px;background:linear-gradient(135deg,#e5c982,#bd9348);color:#172033;font-weight:bold;font-size:16px;text-decoration:none;cursor:pointer}
+    .back{display:inline-block;margin-top:22px;color:var(--gold);text-decoration:none}
+    footer{text-align:center;color:#9da8b7;font-size:13px;margin-top:28px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="brand">مكتبة محمود يسري العزب</div>
+      <h1>آراء القراء</h1>
+      <p class="intro">كل قراءة تترك أثرًا، وكل رأي صادق يساعد حكاية جديدة أن تصل إلى قارئها.</p>
+    </header>
+
+    <section class="section">
+      <h2>كلمة من القلب</h2>
+      <div class="notice">هذه الصفحة مخصصة لآراء القراء الحقيقية حول كتب المكتبة. سنضيف المشاركات بعد استلامها ومراجعتها، احترامًا لأمانة الكلمة وصدق التجربة.</div>
+      <div class="empty">
+        <div class="symbol">✦</div>
+        <strong>ننتظر أول انطباع منك</strong>
+        <div>إذا قرأت أحد كتب المكتبة، يسعدنا أن تشاركنا رأيك.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>شاركنا رأيك</h2>
+      <p class="intro" style="margin:0">اكتب اسمك (اختياريًا)، واختر الكتاب، ثم اكتب رأيك. سيُفتح واتساب برسالتك لتراجعها وترسلها بنفسك.</p>
+      <form id="reviewForm">
+        <label for="reader">اسمك (اختياري)</label>
+        <input id="reader" name="reader" maxlength="60" placeholder="اكتب الاسم الذي تحب ظهوره">
+        <label for="book">اسم الكتاب</label>
+        <select id="book" name="book" required>
+          <option value="">اختر الكتاب</option>
+          <option>خارج حدود الحكاية</option>
+          <option>حين دقّت القلوب على أبواب مصر</option>
+        </select>
+        <label for="opinion">رأيك أو انطباعك</label>
+        <textarea id="opinion" name="opinion" maxlength="1200" required placeholder="ما الذي أعجبك في الكتاب؟ وما الأثر الذي تركه لديك؟"></textarea>
+        <button type="submit">إرسال رأيي عبر واتساب</button>
+      </form>
+    </section>
+
+    <a class="back" href="index.html">← العودة إلى الصفحة الرئيسية</a>
+    <footer>© مكتبة محمود يسري العزب — جميع الحقوق محفوظة</footer>
+  </main>
+  <script>
+    document.getElementById('reviewForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const reader = document.getElementById('reader').value.trim() || 'قارئ';
+      const book = document.getElementById('book').value;
+      const opinion = document.getElementById('opinion').value.trim();
+      if(!book || !opinion){ alert('من فضلك اختر الكتاب واكتب رأيك.'); return; }
+      const message = `مرحبًا، أود مشاركة رأيي في أحد كتب مكتبة محمود يسري العزب.%0Aالاسم: ${encodeURIComponent(reader)}%0Aالكتاب: ${encodeURIComponent(book)}%0Aالرأي: ${encodeURIComponent(opinion)}`;
+      window.open('https://wa.me/201030496882?text=' + message, '_blank');
+    });
+  </script>
+</body>
+</html>
