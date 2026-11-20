@@ -86,6 +86,105 @@
     @media(max-width:520px){.nav{align-items:flex-start;flex-direction:column;padding:12px 0}.links{gap:13px;font-size:12px}.hero{padding:52px 0}.book-card{grid-template-columns:1fr}.book-cover{min-height:220px}.book-info h3{font-size:20px}section{padding:48px 0}}
   </style>
 </head>
+  <!-- بداية قسم رحلتي الأدبية: انسخ هذا الجزء كاملًا وضعه قبل </body> في ملف index.html -->
+<style>
+  .journey-section {
+    direction: rtl;
+    font-family: inherit;
+    max-width: 1100px;
+    margin: 48px auto;
+    padding: 32px 20px;
+    color: #f7f2e8;
+    background: linear-gradient(145deg, #101d35, #172947);
+    border: 1px solid rgba(212, 175, 55, .45);
+    border-radius: 22px;
+    box-sizing: border-box;
+  }
+  .journey-section * { box-sizing: border-box; }
+  .journey-section .journey-kicker {
+    color: #d8b85b;
+    font-size: 14px;
+    letter-spacing: .5px;
+    margin: 0 0 10px;
+  }
+  .journey-section h2 {
+    color: #f0d27a;
+    font-size: clamp(25px, 4vw, 36px);
+    margin: 0 0 14px;
+  }
+  .journey-section .journey-intro {
+    color: #e5e8ef;
+    line-height: 1.9;
+    max-width: 760px;
+    margin: 0 0 26px;
+  }
+  .journey-section .journey-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+  }
+  .journey-section .journey-card {
+    padding: 22px;
+    border-radius: 16px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(240,210,122,.25);
+  }
+  .journey-section .journey-card h3 {
+    color: #f0d27a;
+    font-size: 19px;
+    line-height: 1.6;
+    margin: 0 0 10px;
+  }
+  .journey-section .journey-card p {
+    color: #e5e8ef;
+    line-height: 1.8;
+    margin: 0 0 18px;
+  }
+  .journey-section .journey-link {
+    display: inline-block;
+    padding: 10px 18px;
+    color: #14213a;
+    background: #e2c36b;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .journey-section .journey-note {
+    color: #cbd3e1;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 20px 0 0;
+  }
+</style>
+
+<section class="journey-section" id="journey">
+  <p class="journey-kicker">من صفحات الكتب إلى قلوب القرّاء</p>
+  <h2>رحلتي الأدبية</h2>
+  <p class="journey-intro">
+    الكتابة بالنسبة لي مساحة أقترب فيها من الإنسان وأسئلته، ومن الحكايات التي يتركها التاريخ
+    والحياة في ذاكرتنا. وفي هذه المكتبة أجمع إصداراتي في مكان واحد، لتكون قريبة من كل قارئ
+    يبحث عن حكاية أو فكرة تترك أثرًا.
+  </p>
+
+  <div class="journey-grid">
+    <article class="journey-card">
+      <h3>خارج حدود الحكاية</h3>
+      <p>عمل أدبي يأخذ القارئ إلى ما وراء ظاهر الحكايات، ويفتح مساحة للتأمل فيما بداخل الإنسان.</p>
+      <a class="journey-link" href="kharaji.html">اقرأ عن الكتاب</a>
+    </article>
+
+    <article class="journey-card">
+      <h3>حين دقّت القلوب على أبواب مصر</h3>
+      <p>كتاب من إصدارات المكتبة، يجمع القارئ بعمل أدبي يستلهم حكايات مصر وما تحمله من دلالات.</p>
+      <a class="journey-link" href="heyn.html">اقرأ عن الكتاب</a>
+    </article>
+  </div>
+
+  <p class="journey-note">
+    مكتبة محمود يسري العزب — مساحة تجمع الإصدارات وتقرّبها من القرّاء.
+  </p>
+</section>
+<!-- نهاية قسم رحلتي الأدبية -->
 <body>
 <div class="topline"></div>
 <header>
